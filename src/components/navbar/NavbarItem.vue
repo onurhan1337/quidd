@@ -1,5 +1,10 @@
 <template>
-  <RouterLink v-for="link in links" to="{{link.slug}}" class="navbar-item" :key="link.name">
+  <RouterLink
+    v-for="link in links"
+    to="{{link.slug}}"
+    class="navbar-item"
+    :key="link.name"
+  >
     {{ link.name }}
   </RouterLink>
 </template>
@@ -8,6 +13,7 @@
 export default {
   data() {
     return {
+      // TODO: currently not working, will update via vue-router. see https://router.vuejs.org/guide/#javascript
       links: [
         {
           slug: '/',
@@ -23,6 +29,6 @@ export default {
         }
       ]
     }
-  }
+  },
 }
 </script>

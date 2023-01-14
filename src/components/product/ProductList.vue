@@ -1,7 +1,6 @@
 <template>
-  <div>
-    <ul>
-      <!-- TODO: Gelen ürün bilgileri render edilecek -->
+  <div class="container px-5 mx-auto">
+    <ul class="flex flex-wrap -m-4">
       <ProductCard />
     </ul>
   </div>
