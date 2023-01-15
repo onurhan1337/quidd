@@ -1,33 +1,26 @@
 <template>
-  <RouterLink
-    v-for="link in links"
-    to="{{link.slug}}"
-    class="navbar-item"
-    :key="link.name"
-  >
-    {{ link.name }}
-  </RouterLink>
+  <router-link to="/" class="navbar-item">
+    Home
+  </router-link>
+  <router-link to="/cart" class="navbar-item">
+    Cart
+  </router-link>
+  <router-link to="/checkout" class="navbar-item">
+    Checkout
+  </router-link>
 </template>
 
 <script>
+import HomeView from '@/views/HomeView.vue'
+import NotFound from '@/views/NotFound.vue'
+
 export default {
   data() {
     return {
-      // TODO: currently not working, will update via vue-router. see https://router.vuejs.org/guide/#javascript
-      links: [
-        {
-          slug: '/',
-          name: 'Home'
-        },
-        {
-          slug: '/cart',
-          name: 'Cart'
-        },
-        {
-          slug: '/checkout',
-          name: 'Checkout'
-        }
-      ]
+     components: {
+        HomeView,
+        NotFound
+      }
     }
   },
 }

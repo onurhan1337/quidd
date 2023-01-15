@@ -16,5 +16,7 @@ import Navbar from '@/components/navbar/NavBar.vue'
     </div>
   </header>
 
-  <RouterView />
+  <main class="container mx-auto">
+    <RouterView />
+  </main>
 </template>
